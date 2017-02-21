@@ -1,4 +1,4 @@
-#! /usr/bin/python
+# /usr/bin/python
 
 from xbee.zigbee import ZigBee
 import serial
@@ -26,7 +26,7 @@ UNKNOWN = '\xff\xfe'
 
 NUM_OF_DEST = 1
 # the addr. of arduino xbee
-DEST = '\x00\x13\xa2\x00\x40\xca\xde\xff'
+DEST = '\x00\x13\xa2\x00\x40\x69\x4e\x28'
 
 
 # open a serial port
@@ -65,11 +65,11 @@ for i in range(RUN_TIMES):
 	while(time.clock() - t0 < expired_time):
 		time.sleep(.01)
 		response = xbee.wait_read_frame()
-		#print response		
+		print response		
 		if response['id'] == 'rx' :
 			if response['rf_data'] == 'end\x00\x00\x00\x00\x00\x00\x00':
 				break
-			elif response['rf_data'] == 'nofile\x00':
+			elif response['rf_data'] == 'nofile\x00\x00\x00\x00':
 				skip_check = 1
 				break
 			else:
@@ -116,12 +116,13 @@ Python can directly print array like [[...], [...], [...], ...].
 If your 2-D array RECEIVED_PACKET have different columns length, 
 you can use "range(len(RECEIVED_PACKET[i]))" to control second layer for loop.
 """
-print('[DAY'+ test +'] received:')
+print('==============================================================================================================================================================')
+print('\n\n[DAY'+ test +'] received:')
 for item in RECEIVED_PACKET[0]:
 	if not item: # for no file case
 		print 'nothing'
 		break
-	elif item['rf_data'][2:] != '00000000000000\n\x00\x00\x00':
+	elif item['rf_data'][2:] != '00000000000000':
 		print(item)
 
 ser.close()
