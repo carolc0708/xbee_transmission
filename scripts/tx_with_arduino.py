@@ -65,7 +65,11 @@ for i in range(RUN_TIMES):
 	while(time.clock() - t0 < expired_time):
 		time.sleep(.01)
 		response = xbee.wait_read_frame()
+<<<<<<< HEAD
 #		print response		
+=======
+		print response		
+>>>>>>> 9bc8df6a92146241c69b2f30e04d29a23885db74
 		if response['id'] == 'rx' :
 			if response['rf_data'] == 'end\x00\x00\x00\x00\x00\x00\x00':
 				break
@@ -116,7 +120,8 @@ Python can directly print array like [[...], [...], [...], ...].
 If your 2-D array RECEIVED_PACKET have different columns length, 
 you can use "range(len(RECEIVED_PACKET[i]))" to control second layer for loop.
 """
-print('[DAY'+ test +'] received:')
+print('==============================================================================================================================================================')
+print('\n\n[DAY'+ test +'] received:')
 for item in RECEIVED_PACKET[0]:
 	if not item: # for no file case
 		print 'nothing'
