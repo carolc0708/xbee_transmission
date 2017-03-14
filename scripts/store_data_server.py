@@ -31,7 +31,7 @@ def split_data(dict_string):
 
 def handle_store_data(req):
 	 # create the sub directory first
-	file_path = '/home/swimglass/catkin_ws/src/xbee_transmission/file' + '/' + str(req.x) + '_' + str(req.y)
+	file_path = '/home/carol/catkin_ws/src/xbee_transmission/file' + '/' + str(req.x) + '_' + str(req.y)
 	os.mkdir(file_path,0777)
 
 	day_cnt = 7
@@ -52,7 +52,7 @@ def handle_store_data(req):
 		# write header to csv file
 		#csvHeader = ['timestamp', 'machine_id', 'user_id', 'boxState']
 		#csvCursor.writerow(csvHeader)
-		result = subprocess.Popen(["python","/home/swimglass/catkin_ws/src/xbee_transmission/scripts/tx_with_arduino.py", str(i+1)],stdout=subprocess.PIPE).communicate()[0]
+		result = subprocess.Popen(["python","/home/carol/catkin_ws/src/xbee_transmission/scripts/tx_with_arduino.py", str(i+1)],stdout=subprocess.PIPE).communicate()[0]
 		if(result.split('\n')[1] != 'nothing'):
 			# record data miss
 			data_miss += 1

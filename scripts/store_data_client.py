@@ -21,7 +21,7 @@ if __name__ == '__main__':
 			x = float(sys.argv[1])
 			y = float(sys.argv[2])
 			# delete directory if already exist
-			file_path = '/home/swimglass/catkin_ws/src/xbee_transmission/file/'+str(x)+'_'+str(y)
+			file_path = '/home/carol/catkin_ws/src/xbee_transmission/file/'+str(x)+'_'+str(y)
 			if os.path.exists(file_path):
 				subprocess.Popen(['rm', '-r', file_path+'/'],stdout=subprocess.PIPE) 
 			print '[Request waypoint] %.5f %.5f'%(x,y)
