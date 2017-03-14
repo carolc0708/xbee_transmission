@@ -1,7 +1,7 @@
 # xbee_transmission
 
-STEP 1: Raspberry pi should be set up with static IP address for pietty to connect.
-STEP 2: Open a terminal, execute `$ roscore`.
+STEP 1: Raspberry pi should be set up with static IP address for pietty to connect.  
+STEP 2: Open a terminal, execute `$ roscore`.  
 STEP 3: Open the second terminal, and do the following.
 ```
 $ cd catkin_ws
