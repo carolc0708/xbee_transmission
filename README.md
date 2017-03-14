@@ -14,7 +14,7 @@ $ cd catkin_ws
 $ source ./devel/setup.bash # every time after file content is revised 
 $ rosrun xbee_transmission store_data_client.py 5.666 7.888 # assign a waypoint coordinate for it
 ```
-If response is sent out, you will get the message:
+If request is sent out, you will get the message:
 ```
 [Request waypoint] 5.66600 7.88800
 ```
