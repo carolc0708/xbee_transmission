@@ -27,7 +27,7 @@ STEP 5: Wait for about 10 seconds, you will recieve the following if the data is
 
 STEP 6: Check if the data is collected and with correct content.
 ```
-$ cd ~/catkin_ws/src/xbee_transmission/file/5.666_7.888$
+$ cd ~/catkin_ws/src/xbee_transmission/file/5.666_7.888
 $ ls
 ```
 You will see the following result. Check the content using `$ vim` command.
