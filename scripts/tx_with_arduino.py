@@ -1,6 +1,6 @@
 # /usr/bin/python
 
-from xbee.zigbee import ZigBee
+from xbee import ZigBee
 import serial
 import time
 import sys
